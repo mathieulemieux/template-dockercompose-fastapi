@@ -1,0 +1,5 @@
+services:
+  fastapi:
+    ports:
+      - "${FASTAPI_PROD_PORT}:8000"
+

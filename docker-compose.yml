@@ -1,0 +1,11 @@
+version: ${COMPOSE_API_VERSION}
+services:
+  fastapi:
+    build: ./services/fastapi
+    image: ${REGISTRY}/fastapi:${FASTAPI_IMG_TAG}
+    container_name: "${APP_NAME}_fastapi"
+    secrets:
+      - fastapi_secrets
+secrets:
+  fastapi_secrets:
+    file: ./services/fastapi/.secrets
